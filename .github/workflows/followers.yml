@@ -1,4 +1,4 @@
-name: "Follows Check"
+name: "GET Followers"
  
 on:
   workflow_dispatch:
