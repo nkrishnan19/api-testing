@@ -5,5 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: read
-        run:|
+    steps:
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
           gh api repos/octocat/Spoon-Knife/issues
