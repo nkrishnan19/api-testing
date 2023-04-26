@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: REST API with curl
+    - env:
+        GH_TOKEN: ${{ secrets.TOKEN }}
       run: |
          gh api \
          -H "Accept: application/vnd.github+json" \
