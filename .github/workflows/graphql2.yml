@@ -69,7 +69,7 @@ jobs:
       - name: Get Project Status Item ID
         run: |
           gh api graphql -f query='query{
-          organization(login: "${{ env.ORGANIZATION }}"){
+          user(login: "${{ env.ORGANIZATION }}"){
               projectV2(number: ${{ env.PROJECT_NUMBER }}) {
                   id
                   fields(first:20) {
