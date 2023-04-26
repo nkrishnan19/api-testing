@@ -1,0 +1,14 @@
+name: "Hit a webhook"
+ 
+on:
+  push:
+    tags:
+      - '**'
+ 
+jobs:
+  run-updater:
+    runs-on: ubuntu-latest
+    steps:
+    - name: REST API with curl
+      run: |
+         curl https://api.github.com/nkrishnan19/following/sagars729
