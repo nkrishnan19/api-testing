@@ -9,4 +9,7 @@ jobs:
     steps:
     - name: REST API with curl
       run: |
-         curl https://api.github.com/nkrishnan19/following/sagars729
+         gh api \
+         -H "Accept: application/vnd.github+json" \
+         -H "X-GitHub-Api-Version: 2022-11-28" \
+         /user/following/sagars729
