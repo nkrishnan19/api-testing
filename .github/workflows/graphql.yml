@@ -1,0 +1,13 @@
+name: New Branch Created 
+
+on:
+  create
+    
+jobs:
+  On-New-Branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Issue Number
+        run: |
+          branch_name=`echo '${{ github.event.ref }}'`
+          issue_num=`echo ${branch_name#*#} | egrep -o '^[^/]+'`
